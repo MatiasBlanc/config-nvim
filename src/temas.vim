@@ -3,7 +3,6 @@ call plug#begin()
 Plug 'ulwlu/elly.vim'
 " Nord
 Plug 'arcticicestudio/nord-vim'
-" Airline
-Plug 'vim-airline/vim-airline' " Airline
-Plug 'vim-airline/vim-airline-themes'  " Temas para airline
+" tokyonight
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()

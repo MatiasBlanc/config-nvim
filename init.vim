@@ -14,7 +14,9 @@ set title
 
 call plug#begin()
 " Temas
-source /home/matiasblanc/.config/nvim/src/temas.vim
+source src/temas.vim
+" airline
+Plug 'vim-airline/vim-airline'
 " Pantalla de Inicio
  Plug 'mhinz/vim-startify'
 " Explorador de archivos
@@ -41,7 +43,6 @@ source /home/matiasblanc/.config/nvim/src/atajos.vim
 
 " Airline configuration
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
-let g:airline#extensions#tabline#fnamemod = ':t'  " Mostrar sólo el nombre del archivo
 let g:airline_powerline_fonts = 1
 
 " Nerdtree configuration
@@ -55,10 +56,10 @@ let g:indentLine_char_list = ['.']
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " Elegir el tema
-colorscheme elly 
-let g:airline_theme='elly'
 set termguicolors
-
+colorscheme tokyonight
+"colorscheme elly
+"colorscheme nord
 
 let &viewdir=expand("~/") . ".config/nvim/folding"
 if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif

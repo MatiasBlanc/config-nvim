@@ -7,10 +7,11 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>so :so%<cr>
 nnoremap <leader>f :FZF<cr>
 nnoremap <leader>p :PlugInstall<cr>
-nnoremap <s-n> :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 nmap <leader>v :bprevious<CR>
 nmap <leader>b :bnext<CR>
+nmap <C-1> :b1<CR>
 
 inoremap jk <Esc>
 vnoremap jk <Esc>
