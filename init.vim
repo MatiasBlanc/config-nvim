@@ -57,8 +57,7 @@ let g:indentLine_char_list = ['.']
 
 " Elegir el tema
 set termguicolors
-let g:airline_theme="elly"
-colorscheme night-owl
+colorscheme tokyonight
 "colorscheme elly
 "colorscheme nord
 
