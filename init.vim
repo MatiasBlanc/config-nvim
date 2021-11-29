@@ -14,7 +14,7 @@ set title
 
 call plug#begin()
 " Temas
-source src/temas.vim
+source ~/.config/nvim/src/temas.vim
 " airline
 Plug 'vim-airline/vim-airline'
 " Pantalla de Inicio
@@ -39,7 +39,15 @@ Plug 'AndrewRadev/tagalong.vim'
 call plug#end()
 
 " Atajos de teclado
-source /home/matiasblanc/.config/nvim/src/atajos.vim
+source ~/.config/nvim/src/atajos.vim
+" startify
+let g:startify_custom_header = [
+\' ____ _____                   _   __  __ ____  ',
+\'/ ___|_   _|   __ _ _ __   __| | |  \/  | __ ) ',
+\'\___ \ | |    / _` |  _ \ / _` | | |\/| |  _ \ ',
+\' ___) || |   | (_| | | | | (_| | | |  | | |_) |',
+\'|____/ |_|    \__,_|_| |_|\__,_| |_|  |_|____/ ',
+\]
 
 " Airline configuration
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
