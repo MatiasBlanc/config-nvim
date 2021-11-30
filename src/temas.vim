@@ -5,4 +5,6 @@ Plug 'ulwlu/elly.vim'
 Plug 'arcticicestudio/nord-vim'
 " tokyonight
 Plug 'ghifarit53/tokyonight-vim'
+" Vim-one
+Plug 'rakr/vim-one'
 call plug#end()
