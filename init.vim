@@ -1,21 +1,23 @@
 " Configuracion Normal
-set signcolumn=yes
+syntax enable " Se activa la sintaxis
+set mouse=a " Se puede ocupar el mouse para navegar
 set number
-set mouse=a
 set numberwidth=2
-syntax enable
-set encoding=utf-8
-set showmatch
-set sw=2
 set relativenumber
+set encoding=utf-8
+set showmatch " Se destacan los parentesis de cierre
+set sw=2 " Configura la cantidad de espacios que salta al poner TAB
 set laststatus=2
-set noshowmode
+set noshowmode " No se ve el modo en la barra de comandos
 set title
 
 call plug#begin()
-" Temas
 source ~/.config/nvim/src/temas.vim
-" airline
+
+Plug 'mattn/emmet-vim'
+" Multiple cursor
+Plug 'terryma/vim-multiple-cursors'
+" Airline
 Plug 'vim-airline/vim-airline'
 " Pantalla de Inicio
  Plug 'mhinz/vim-startify'
@@ -36,7 +38,17 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'Yggdroot/indentLine'
 " HTML plugins
 Plug 'AndrewRadev/tagalong.vim'
+" Estadisticas
+Plug 'wakatime/vim-wakatime' 
 call plug#end()
+
+" Elegir el tema
+set termguicolors
+colorscheme tokyonight
+"colorscheme elly
+"colorscheme nord
+"colorscheme one 
+"set background=light
 
 " Atajos de teclado
 source ~/.config/nvim/src/atajos.vim
@@ -62,12 +74,6 @@ let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal','.vim']
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 let g:indentLine_char_list = ['.']
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-" Elegir el tema
-set termguicolors
-colorscheme tokyonight
-"colorscheme elly
-"colorscheme nord
 
 let &viewdir=expand("~/") . ".config/nvim/folding"
 if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
