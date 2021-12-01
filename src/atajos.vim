@@ -8,19 +8,19 @@ nmap <leader>f :FZF<cr>
 nmap <leader>p :PlugInstall<cr>
 nmap <leader>n :NERDTreeToggle<cr>
 
-nmap <leader>bd :bdelete
-nmap <leader>v :bprevious<CR>
-nmap <leader>b :bnext<CR>
-nmap <C-1> :b1<CR>
+nmap <leader>bd :bdelete<cr>
+nmap <leader>v :bprevious<cr>
+nmap <leader>b :bnext<cr>
+nmap <C-1> :b1<cr>
 
-inoremap jk <Esc>
-vnoremap jk <Esc>
-inoremap kj <Esc>
-vnoremap kj <Esc>
-inoremap KJ <Esc>
-vnoremap JK <Esc>
-inoremap Jk <Esc>
-vnoremap Kj <Esc>
+imap jk <Esc>
+vmap jk <Esc>
+imap kj <Esc>
+vmap kj <Esc>
+imap KJ <Esc>
+vmap JK <Esc>
+imap Jk <Esc>
+vmap Kj <Esc>
 
 let g:multi_cursor_use_default_mapping=0
 
