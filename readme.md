@@ -1,4 +1,4 @@
-Hi dev
+### Hi dev
 Aqui esta mi configuracion de neovim, para ocuparla y que funcione de la manera adecuada necesitas estas cosas:
 
 1.- Tener nvim instalado

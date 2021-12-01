@@ -1,32 +1,36 @@
-" Configuracion Normal
-syntax enable " Se activa la sintaxis
-set mouse=a " Se puede ocupar el mouse para navegar
+" General config
+syntax enable
+set mouse=a " Active mouse
 set number
 set numberwidth=2
 set relativenumber
 set encoding=utf-8
-set showmatch " Se destacan los parentesis de cierre
-set sw=2 " Configura la cantidad de espacios que salta al poner TAB
-set laststatus=2
-set noshowmode " No se ve el modo en la barra de comandos
-set title
+set showmatch " Show matching brackets
+set sw=2 " Tabstop width
+set laststatus=2 " Show status bar
+set noshowmode " Hide mode
+set title " Show title
 
+" Plugins
 call plug#begin()
-source ~/.config/nvim/src/temas.vim
-
+source ~/.config/nvim/src/temas.vim " Theme plugins
+" Emmet plugin
 Plug 'mattn/emmet-vim'
+" Rainbow parentesis
+Plug 'luochen1990/rainbow'
 " Multiple cursor
 Plug 'terryma/vim-multiple-cursors'
 " Airline
 Plug 'vim-airline/vim-airline'
-" Pantalla de Inicio
+" Start screen
  Plug 'mhinz/vim-startify'
-" Explorador de archivos
+" files sidebar
 Plug 'scrooloose/nerdtree'
-" Buscador de archivos
+" file browser
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" text browser
 Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/fzf.vim'
-" Autocompletado
+" Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'branch': 'master'}
 " Sintaxis
@@ -34,15 +38,15 @@ Plug 'sheerun/vim-polyglot'
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } 
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Color en la identacion
+" Ident color
 Plug 'Yggdroot/indentLine'
 " HTML plugins
 Plug 'AndrewRadev/tagalong.vim'
-" Estadisticas
+" Statisctic
 Plug 'wakatime/vim-wakatime' 
 call plug#end()
 
-" Elegir el tema
+" Theme config
 set termguicolors
 colorscheme tokyonight
 "colorscheme elly
@@ -50,8 +54,8 @@ colorscheme tokyonight
 "colorscheme one 
 "set background=light
 
-" Atajos de teclado
-source ~/.config/nvim/src/atajos.vim
+source ~/.config/nvim/src/atajos.vim " Shortcuts
+
 " startify
 let g:startify_custom_header = [
 \' ____ _____                   _   __  __ ____  ',
@@ -62,15 +66,14 @@ let g:startify_custom_header = [
 \]
 
 " Airline configuration
-let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
+let g:airline#extensions#tabline#enabled = 1 " Enable tabline
 let g:airline_powerline_fonts = 1
 
 " Nerdtree configuration
 let g:NERDTreeChDirMode = 2
 
 " Identline configuration
-" No mostrar en ciertos tipos de buffers y archivos
-let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal','.vim']
+let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal','.vim'] 
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
 let g:indentLine_char_list = ['.']
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
