@@ -14,6 +14,8 @@ set title " Show title
 " Plugins
 call plug#begin()
 source ~/.config/nvim/src/temas.vim " Theme plugins
+" TailwindCss
+Plug 'rodrigore/coc-tailwind-intellisense'
 " Emmet plugin
 Plug 'mattn/emmet-vim'
 " Rainbow parentesis
@@ -26,8 +28,6 @@ Plug 'vim-airline/vim-airline'
  Plug 'mhinz/vim-startify'
 " files sidebar
 Plug 'scrooloose/nerdtree'
-" file browser
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " text browser
 Plug 'easymotion/vim-easymotion'
 " Autocomplete
@@ -45,7 +45,6 @@ Plug 'AndrewRadev/tagalong.vim'
 " Statisctic
 Plug 'wakatime/vim-wakatime' 
 call plug#end()
-
 " Theme config
 set termguicolors
 colorscheme tokyonight
