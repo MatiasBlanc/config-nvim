@@ -32,7 +32,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master'}
 " Sintaxis
 Plug 'sheerun/vim-polyglot'
 Plug 'othree/html5.vim', { 'for': 'html' }
@@ -71,6 +70,9 @@ let g:airline_powerline_fonts = 1
 " Nerdtree configuration
 let g:NERDTreeChDirMode = 2
 
+" rainbow parentesis
+let g:rainbow_active = 1
+
 " Identline configuration
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal','.vim'] 
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
@@ -82,3 +84,6 @@ if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
 
 autocmd BufWrite * mkview
 autocmd BufRead * silent! loadview
+
+" COC configuration
+let g:cssColorVimDoNotMessMyUpdatetime = 1
