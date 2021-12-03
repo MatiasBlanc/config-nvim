@@ -14,6 +14,8 @@ set title " Show title
 " Plugins
 call plug#begin()
 source ~/.config/nvim/src/temas.vim " Theme plugins
+" TailwindCss
+Plug 'rodrigore/coc-tailwind-intellisense'
 " Emmet plugin
 Plug 'mattn/emmet-vim'
 " Rainbow parentesis
@@ -26,13 +28,10 @@ Plug 'vim-airline/vim-airline'
  Plug 'mhinz/vim-startify'
 " files sidebar
 Plug 'scrooloose/nerdtree'
-" file browser
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " text browser
 Plug 'easymotion/vim-easymotion'
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'branch': 'master'}
 " Sintaxis
 Plug 'sheerun/vim-polyglot'
 Plug 'othree/html5.vim', { 'for': 'html' }
@@ -45,7 +44,6 @@ Plug 'AndrewRadev/tagalong.vim'
 " Statisctic
 Plug 'wakatime/vim-wakatime' 
 call plug#end()
-
 " Theme config
 set termguicolors
 colorscheme tokyonight
@@ -72,6 +70,9 @@ let g:airline_powerline_fonts = 1
 " Nerdtree configuration
 let g:NERDTreeChDirMode = 2
 
+" rainbow parentesis
+let g:rainbow_active = 1
+
 " Identline configuration
 let g:indentLine_fileTypeExclude = ['text', 'sh', 'help', 'terminal','.vim'] 
 let g:indentLine_bufNameExclude = ['NERD_tree.*', 'term:.*']
@@ -83,3 +84,6 @@ if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
 
 autocmd BufWrite * mkview
 autocmd BufRead * silent! loadview
+
+" COC configuration
+let g:cssColorVimDoNotMessMyUpdatetime = 1
